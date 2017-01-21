@@ -14,12 +14,11 @@ function geoFindMe() {
     var longitude = position.coords.longitude.toString().split(".")[0];
     output.innerHTML = 'Woof!';
     var myUrl = "http://104.198.245.168:3000/weather?lat=" + latitude + "&lon=" + longitude;
-    console.log(myUrl);
     getWeather(myUrl);
   }
 
   function error() {
-    output.innerHTML = "Unable to retrieve your location";
+    output.innerHTML = "Error getting location";
   }
 
   output.innerHTML = "<p>Locating…</p>";
@@ -39,7 +38,6 @@ $( document ).ready(function() {
   $('.fav-location').click(function(event) {
     event.preventDefault();
     var cityId = $( this ).attr( "data-city-id" );
-    console.log(cityId);
     var myUrl = "http://104.198.245.168:3000/weather?id=" + cityId;
     getWeather(myUrl);
   });
@@ -68,7 +66,6 @@ function getWeather(myUrl) {
       $('body').css('background-image', 'url(images/bg/' + iconId + '.jpg)');
 
       if(iconId === '13d' || iconId === '13n'){
-        console.log('addClass');
         $('.yoshi-image').addClass('snow');
       } else {
         $('.yoshi-image').removeClass('snow');
