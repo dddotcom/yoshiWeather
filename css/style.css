@@ -1,0 +1,111 @@
+* {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition:    all 0.5s ease;
+  -ms-transition:     all 0.5s ease;
+  -o-transition:      all 0.5s ease;
+}
+
+footer {
+  color: white;
+  clear: both;
+  font-size: 12px;
+  font-family: 'Indie Flower', cursive;
+}
+
+header {
+  font-size: 35px;
+  color: white;
+  font-family: 'Pacifico', cursive;
+}
+
+h1 {
+  margin: 20px;
+  font-weight: normal;
+}
+
+hr {
+  margin: 0;
+}
+
+.snow{
+  width: 200px;
+  height: auto;
+}
+
+nav {
+  width:200px;
+}
+
+#side-nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0px;
+    width: 200px;
+}
+
+#side-nav a:hover {
+  color: white;
+  background-color: rgba(48,53,61,0.3);
+  text-decoration: none;
+  width: 200px;
+}
+
+.weather-info {
+  background-color: rgba(48,53,61,0.3);
+  width: 500px;
+  margin: 5px auto;
+  padding: 0.1px 0 19.72px 0;
+}
+
+#favorites {
+  margin: 10px 0px;
+  font-size: 20px;
+  color: white;
+}
+
+#side-nav {
+  float:left;
+  width: 10%;
+  height: 625px;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+}
+
+#main-content {
+  float: right;
+  width: 90%;
+  text-align:center;
+  font-family: 'Indie Flower', cursive;
+  color: white;
+
+}
+
+body {
+  background-color: rgba(33, 150, 160, 0.7);
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+label {
+  font-size: 13px;
+}
+
+.about-text {
+  width: 500px;
+  margin: 0 auto;
+  background-color: rgba(48,53,61,0.3);
+}
+
+img {
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
