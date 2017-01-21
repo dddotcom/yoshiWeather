@@ -42,7 +42,11 @@ $( document ).ready(function() {
     getWeather(myUrl);
   });
 
-  geoFindMe();
+  //enable w/ https
+  //geoFindMe();
+
+  //use w/ http, default to Hawaii!
+  getWeather("http://104.198.245.168:3000/weather?id=5850871");
 
 });
 
