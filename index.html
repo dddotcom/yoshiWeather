@@ -12,16 +12,7 @@
 
       <div id="side-nav">
         <nav class="side-nav">
-            <a href="#">Home</a>
-            <hr>
-            <a class="custom-anchor" href="#">About</a>
-            <hr>
-            <a class="custom-anchor" href="#">Contact</a>
-            <hr>
-
-            <br/>
-            <br/>
-            <p id="favorites">Favorite cities</p>
+            <p class="favorites">Favorite cities</p>
             <hr>
             <a class="custom-anchor fav-location" href="#" data-city-id="5809844">Seattle, WA</a>
             <hr>
@@ -35,10 +26,16 @@
             <hr>
             <a class="custom-anchor fav-location" href="#" data-city-id="5879400">Anchorage, AK</a>
             <hr>
+            <br>
+            <p class="favorites" for="zipCode">Find my location</p>
+            <input class="zipcode-input" type="text" id="zipCode" placeholder="Enter zipcode">
+            <button class="location-button">Go!</button>
+            <p id="zipcode-output"></p>
         </nav>
         <br>
-        <p><button class="geolocation-button">Show my location</button></p>
-        <div id="out"></div>
+        <!-- enable with https -->
+        <!-- <p><button class="geolocation-button">Show my location</button></p>
+        <div id="out"></div> -->
       </div>
 
       <div id="main-content">
@@ -52,26 +49,17 @@
 
         <div class="weather-info">
           <h3 class="name">Yoshi's Island</h3>
-          <p>Decription: <span class="description">Sky is Blue</span></p>
-          <p>Wind speed: <span class="wind">-1000</span> mph</p>
-          <p>Temp: <span class="temp">-1000</span>°F Humidity: <span class="humidity">-1000</span>%</p>
-
-          <div class="select-location">
-            <form>
-                <label for="zipCode">Enter Zip Code:  </label>
-                <input class="zipcode-input" type="text" id="zipCode" placeholder="98121">
-                <button class="location-button">Select Location</button>
-            </form>
-          </div>
-
+          <p class="description">---</p>
+          <p><span class="wind">--</span> mph winds</p>
+          <p><span class="temp">-- </span>°F</p>
+          <p><span class="humidity">-- </span>% humidity</p>
         </div>
       </div>
 
     <footer>
-      <p>Made with ♥ for Yoshi the Pom<br>by pbjApps<br>circa 2017</p>
+      <p>Made with ♥ for Yoshi the Pom by <a href="github.com/pbjapps">pbjApps</a><br>circa 2017</p>
     </footer>
 
-    <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="main.js"></script>
   </body>

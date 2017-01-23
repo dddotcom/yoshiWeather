@@ -1,5 +1,6 @@
-var geoButton = document.querySelector('.geolocation-button');
-geoButton.addEventListener('click', geoFindMe);
+// Enable with https
+// var geoButton = document.querySelector('.geolocation-button');
+// geoButton.addEventListener('click', geoFindMe);
 
 function geoFindMe() {
   var output = document.getElementById("out");
@@ -31,8 +32,16 @@ $( document ).ready(function() {
   $('.location-button').click(function(event) {
     event.preventDefault();
     var zipCode = $('.zipcode-input').val();
-    var myUrl = "http://104.198.245.168:3000/weather?zip=" + zipCode + ",us";
-    getWeather(myUrl);
+    //validate zipCode
+    if($.isNumeric(zipCode) && zipCode.toString().length === 5){
+      //get weather
+      $('#zipcode-output').text("");
+      var myUrl = "http://104.198.245.168:3000/weather?zip=" + zipCode + ",us";
+      getWeather(myUrl);
+    } else {
+      $('#zipcode-output').text("Please enter a valid zipcode");
+      $('#zipcode-input').val("");
+    }
   });
 
   $('.fav-location').click(function(event) {
@@ -45,8 +54,8 @@ $( document ).ready(function() {
   //enable w/ https
   //geoFindMe();
 
-  //use w/ http, default to Hawaii!
-  getWeather("http://104.198.245.168:3000/weather?id=5850871");
+  //use w/ http, default to set location!
+  getWeather("http://104.198.245.168:3000/weather?id=5809844");
 
 });
 
@@ -58,6 +67,7 @@ function getWeather(myUrl) {
     .done(function( weatherData ) {
       // console.log( JSON.stringify(weatherData, null, 2) );
       $('.name').text(weatherData.name);
+      //TODO : loop through weather list for description
       $('.description').text(weatherData.weather[0].description);
       $('.wind').text(weatherData.wind.speed);
       $('.temp').text(weatherData.main.temp);
