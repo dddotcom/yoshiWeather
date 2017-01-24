@@ -65,10 +65,15 @@ function getWeather(myUrl) {
     url: myUrl,
   })
     .done(function( weatherData ) {
-      // console.log( JSON.stringify(weatherData, null, 2) );
       $('.name').text(weatherData.name);
-      //TODO : loop through weather list for description
-      $('.description').text(weatherData.weather[0].description);
+      // TODO : loop through weather list for description
+      var descText = "";
+      $.each(weatherData.weather, function( index, value ) {
+        descText += value.description ;
+        descText += " ";
+      });
+      // $('.description').text(weatherData.weather[0].description);
+      $('.description').text(descText);
       $('.wind').text(weatherData.wind.speed);
       $('.temp').text(weatherData.main.temp);
       $('.humidity').text(weatherData.main.humidity);
