@@ -34,6 +34,7 @@ h1 {
 
 h3 {
   margin: 7px 0;
+  font-weight: normal;
 }
 
 hr {
@@ -69,7 +70,7 @@ nav {
   width: 500px;
   margin: 5px auto;
   padding: 10px;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .favorites {
@@ -83,14 +84,14 @@ nav {
   width: 5%;
   height: 625px;
   color: white;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Proza Libre', sans-serif;
 }
 
 #main-content {
   float: right;
   width: 95%;
   text-align:center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Proza Libre', sans-serif;
   color: white;
 }
 
@@ -141,7 +142,7 @@ p {
   height: 30px;
   width: 75px;
   outline: none;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Proza Libre', sans-serif;
 }
 
 .location-button:hover, .location-button:focus {
@@ -156,5 +157,5 @@ p {
   border: none;
   border-radius: 4px;
   padding-left: 5px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Proza Libre', sans-serif;
 }
